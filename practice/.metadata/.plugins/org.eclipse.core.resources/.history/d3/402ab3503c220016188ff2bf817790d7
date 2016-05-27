@@ -1,0 +1,15 @@
+package com.pb.dao;
+
+import java.util.List;
+
+import com.pb.domain.Person;
+
+public interface PersonDao {
+	void save(Person person);
+	void delete(Person person);
+	void update(Person person);
+	Person findByid(Integer id);
+	List<Person> PersonAll();	
+    List<Person> queryByPage(String hql, int offset, int pageSize);
+    int getAllRowCount(String hql);
+}

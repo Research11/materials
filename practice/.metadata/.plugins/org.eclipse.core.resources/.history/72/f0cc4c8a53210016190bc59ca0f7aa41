@@ -1,0 +1,5 @@
+package com.pb.dao;
+
+public interface PersonDao {
+	
+}

@@ -1,0 +1,41 @@
+package com.pb.dao;
+
+import java.util.List;
+
+import org.springframework.orm.hibernate3.HibernateTemplate;
+
+import com.pb.domain.Person;
+
+public class PersonDaoImpl extends HibernateTemplate implements PersonDao{
+
+	@Override
+	public void save(Person person) {
+		super.save(person);		
+	}
+
+	@Override
+	public void delete(Integer id) {
+		super.delete(id);
+	}
+
+	@Override
+	public void update(Person person) {
+	super.update(person);
+		
+	}
+
+	@Override
+	public Person findByid(Integer id) {
+		return super.get(Person.class, id);	
+	}
+
+	@Override
+	public List<Person> PersonAll() {
+		super.find("from Person");
+		//super.loadAll(Person.class);
+		return null;
+	}
+
+	
+
+}

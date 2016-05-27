@@ -1,0 +1,7 @@
+package com.pb.domain;
+
+public class users {
+	String name;
+	String password;
+	
+}

@@ -1,0 +1,14 @@
+package com.pb.common;
+
+import com.pb.dao.PersonDao;
+import com.pb.dao.PersonDaoImpl;
+import com.pb.domain.Person;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

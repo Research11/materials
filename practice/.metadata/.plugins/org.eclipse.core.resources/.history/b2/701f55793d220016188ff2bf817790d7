@@ -1,0 +1,36 @@
+package com.pb.common;
+
+import java.util.List;
+
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.pb.dao.PersonDao;
+import com.pb.domain.PageBean;
+import com.pb.domain.Person;
+
+public class junitTest {
+	
+@Test
+public void tets(){
+	ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+	PersonDao persondao=(PersonDao) context.getBean("personDao");
+	List<Person> list=persondao.PersonAll();
+	for(Person person:list){
+		System.out.println(person.getName());
+		}
+	}
+
+@Test
+public void paging(){
+	
+	ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
+	PersonDao persondao=(PersonDao) context.getBean("personDao");
+	PageBean pagebean=persondao.getPageBean(4, 1);
+	List<Person> list=pagebean.getList();
+	 for(Person person:list){
+		 System.out.println(person.getId()+person.getName());
+	 }
+	}
+}

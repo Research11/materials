@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.pb.domain">
+    <class name="Person">
+        <id name="id">
+            <generator class="native"/>
+        </id>
+        <property name="name"/>
+        <property name="age"/>
+        <property name="email"/>
+        <property name="birthday"/>
+        
+       <!--  <many-to-one name="classes" column="classesid" fetch="join"></many-to-one> -->
+    </class>
+
+</hibernate-mapping>
